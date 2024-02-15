@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.ClearScript;
+using Microsoft.ClearScript.V8;
 
 namespace ConsoleProxyScript
 {
@@ -13,11 +14,15 @@ namespace ConsoleProxyScript
         static void Main(string[] args)
         {
             var engine = new Microsoft.ClearScript.V8.V8ScriptEngine();
+            engine.AddHostObject("host", new HostFunctions());
+            //var math = engine.Evaluate("Math");
+            var math = engine.Script.Math;
+            var sinResult = math.sin(Math.PI / 6);
+            var sqrtResult = math.sqrt(9);
 
-            // add the math library
-            //engine.Execute("var math = require('math');");
-            engine.Execute("var Math = host.import('Math');");
             Console.WriteLine("Hello World!");
+
+
         }
     }
 }
