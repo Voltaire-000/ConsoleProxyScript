@@ -100,6 +100,18 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="scripts\babylon.core.js" />
+    <Content Include="scripts\babylon.js" />
+    <Content Include="scripts\babylon.max.js" />
+    <Content Include="scripts\babylon.noworker.js" />
+    <Content Include="scripts\hand.minified-1.2.js" />
+    <Content Include="scripts\Oimo.js" />
+    <Content Include="scripts\poly2tri.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="scripts\babylon.d.ts" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

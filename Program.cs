@@ -7,6 +7,7 @@ using Microsoft.ClearScript;
 using Microsoft.ClearScript.JavaScript;
 using Microsoft.ClearScript.V8;
 
+
 namespace ConsoleProxyScript
 {
     internal class Program
@@ -18,6 +19,7 @@ namespace ConsoleProxyScript
             //engine.AddHostObject("host", new HostFunctions());
             //var math = engine.Evaluate("Math");
             var math = engine.Script.Math;
+            var mTest = "./content/scripts/babylon.js";
 
             // expose a host type
 
